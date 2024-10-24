@@ -40,6 +40,10 @@ app.set("view engine", "ejs");
 app.use("/", require("./server/routes/main"));
 app.use("/", require("./server/routes/admin"));
 
+app.get("/api/aa", (req, res) => {
+  res.json({ status: "5555555555555555" });
+});
+
 app.listen(port, () => {
   console.log("app listening ....");
 });
